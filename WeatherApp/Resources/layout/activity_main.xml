@@ -1,0 +1,95 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/weather"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2">
+
+        <EditText
+            android:inputType="text"
+            android:background="@android:color/transparent"
+            android:id="@+id/cityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textColor="@android:color/white"
+            android:hint="Enter city name..."
+            android:textColorHint="@android:color/white"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+        />
+        <Button            
+            android:id="@+id/checkWeatherButton"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cityEditText"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:text="Check weather"
+            android:background="@drawable/roundbutton"
+            android:layout_centerHorizontal="true"            
+            android:layout_width="200dp"
+            android:layout_height="40dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:padding="20dp">
+        <ImageView
+            
+            android:id="@+id/weatherImageView"
+            android:src="@drawable/sunshine"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/weatherImageView"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:text="27"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/weatherDescriptionTextView"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@android:color/white"
+            android:text="Shower rain"
+            android:layout_below="@+id/weatherImageView"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+        />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_below="@+id/weatherDescriptionTextView"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:text="Warsaw, PL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>
